@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: var(--font);
+}
+:root{
+    --Soft-Pink:hsl(333, 80%, 67%);
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White:hsl(0, 0%, 100%);
+    --font:'Spartan', sans-serif;
+}
+.col-describtion{
+    text-align: center;
+    display: flex;
+    height: 700px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-info{
+    width: 80%;
+    height: 250px;
+    margin: 10px auto;
+    margin-top: 50px;
+}
+.col-info h1{
+    margin: 20px 0;
+    color:var(--Very-Dark-Magenta);
+}
+p{
+    font-size: 15px;
+}
+.col-info p{
+    color: var(--Dark-Grayish-Magenta);
+}
+.col-rating{
+    width: 80%;
+    height: 300px;
+    margin: 10px auto;
+}
+.rate{
+    margin: 50px 0;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.rate:last-of-type{
+    margin-bottom: 0;
+}
+.rate:first-of-type{
+    margin-top:0;
+}
+.rate p{
+    padding-top: 20px;
+}
+.col-comments{
+    height: 115vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.comment{
+    max-width: 400px;
+    border-radius: 5px;
+    width: 80%;
+    min-height: 250px;
+    background-color: var(--Very-Dark-Magenta);
+    max-height: 300px;
+}
+.customer-info{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    height: 50px;
+}
+.customer-info img{
+    border-radius: 50%;
+    width: 50px;
+}
+.customer-info ,.mail{
+    margin-left: 40px;
+    margin-right: 40px;
+    color:var(--White);
+}
+.mail{
+    color: var(--Dark-Grayish-Magenta);
+}
+.customer-info h4:last-of-type{
+    color: var(--Soft-Pink);
+}
+.customer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.attribution{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:100%;
+    height: 50px;
+    background-color: var(--Dark-Grayish-Magenta);
+}
+/* Extra small devices (phones, 600px and down) */
+@media  (max-width:600px) { /*mobile first design technique*/}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 600px) {
+    .col-describtion{
+        flex-wrap: nowrap;
+        height: 300px;
+    }
+    .col-rating{
+        display: flex;
+        width: 45%;
+        margin: 50px 0 0 0;
+        flex-direction: column;
+    }
+    .col-info{
+        width: 40%;
+        height: 250px;
+        margin:50px 20px 0 20px;
+    }
+    .col-info h1{
+        margin-top: 0;
+    }
+    .rate{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 50px 0 0 0 ;
+    }
+    .rate p{
+        padding:0 0 0 20px;
+    }
+    .rate:nth-of-type(2){
+        align-self: center;
+    }
+    .rate:last-of-type{
+        align-self: flex-end;
+    }
+    .col-comments{
+        margin-top: 30px;
+        flex-direction: row;
+        height: 520px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }    
+    .comment:first-of-type{
+        align-self: flex-start;
+    }
+    .comment:last-of-type{
+        align-self: flex-end;
+    }
+}
+/* Medium devices (landscape tablets,from 600px up to 800px ) */
+@media (min-width:600px) and (max-width: 800px) {
+    .col-comments{
+        height: calc((3 * 250px) + 30px);
+    }
+    .col-describtion{
+        height: 350px;
+    }
+}
+
+/* Large devices (laptops/desktops, 800px and up) */
+@media  (min-width: 800px) {
+    .col-comments{
+        justify-content: space-around;
+        margin: 20px;
+        width: calc(100% - 40px);
+        height: 300px;
+        flex-wrap: nowrap;
+    }
+    .comment{
+        width: 30%;
+    max-width: 35%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
